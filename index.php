@@ -167,6 +167,38 @@
                     </select>
                 </h1>
                 <div class="note">(clique para alterar o dia)</div>
+<?php
+
+    // These must be set ;)
+    $hostname = "";
+    $username = "";
+    $password = "";
+    $database = "";
+    $selectid = "timetables";
+    
+    $con = mysqli_connect($hostname, $username, $password, $database) or die("Could not connect: " . mysqli_error($con));
+
+    $d = "";
+    if ($_SERVER["REQUEST_METHOD"] === "GET" && $_GET["d"]) {
+        $d = $_GET["d"];
+    } else {
+        $d = "0";
+    }
+
+    for ($i = 0; $i < 12; $i++) {
+        for ($k = 0; $k < 3; $k++) {
+            for ($j = 0; $j < 4; $j++) {
+                $c = (($k + 1) * 1000) + $j + 1;
+                $c1001 = mysqli_fetch_assoc(mysqli_query($con, "select * from " . $selectid . " where Day = '" . $d . "' and Time = " . $i . " and Class = " . $c . ";"));
+                echo print_r($c1001, true);
+                echo "<br>";
+            }
+        }
+    }
+
+    // Working on it! :D
+    
+?>
                 <center>
                     <table>
                         <tbody>
@@ -184,7 +216,7 @@
 <tr class="break"><td>15:00</td><td class="empty"></td><td class="empty"></td><td class="empty"></td><td class="empty"></td><td class="empty"></td><td class="empty"></td><td class="empty"></td><td class="empty"></td><td class="empty"></td><td class="empty"></td><td class="empty"></td><td class="empty"></td></tr>
 <tr><td>15:20</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
 <tr><td>16:10</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
-<tr><td>17:00</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+<tr class="break"><td>17:00</td><td class="empty"></td><td class="empty"></td><td class="empty"></td><td class="empty"></td><td class="empty"></td><td class="empty"></td><td class="empty"></td><td class="empty"></td><td class="empty"></td><td class="empty"></td><td class="empty"></td><td class="empty"></td></tr>
                         </tbody>
                     </table>
                 </center>
