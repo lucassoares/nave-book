@@ -39,12 +39,7 @@
             width: 100%;
             margin: 0;
         }
-        @media screen and (min-width: 1300px) and (max-width: 3032px) {
-            #body {
-                width: 80%;
-                margin-left: 10%;
-            }
-        }
+        /*@media screen and (min-width: 1300px) and (max-width: 3032px) {*/
         header, footer {
             background-color: #ef3d4d;
             height: 70px
@@ -86,21 +81,10 @@
         table {
             width: 100%;
             border-collapse: collapse;
-            font-size: 10px;
+            font-size: 14px;
             margin: 0;
             position: relative;
             border: 1px solid #d8d8d8;
-        }
-        @media screen and (min-width: 800px) {
-            table {
-                font-size: 16px;
-            }
-        }
-        @media screen and (min-width: 1300px) and (max-width: 3032px) {
-            table {
-                width: 80%;
-                margin: 20px;
-            }
         }
         tr:nth-child(odd) {
             background-color: #efefef;
@@ -148,6 +132,14 @@
             color: #b0b0b0;
             background: #d0d0d0;
         }
+        span.subject, span.teacher {
+            font-family: "Open Sans", sans-serif;
+        }
+        span.teacher {
+            display: block;
+            font-size: 10px;
+            color: #a0a0a0;
+        }
     </style>
 </head>
 <body>
@@ -167,6 +159,10 @@
                     </select>
                 </h1>
                 <div class="note">(clique para alterar o dia)</div>
+                <center>
+                    <table>
+                        <tbody>
+<tr><th>Hora</th><th>1001</th><th>1002</th><th>1003</th><th>1004</th><th>2001</th><th>2002</th><th>2003</th><th>2004</th><th>3001</th><th>3002</th><th>3003</th><th>3004</th></tr>
 <?php
 
     // These must be set ;)
@@ -185,38 +181,31 @@
         $d = "0";
     }
 
-    for ($i = 0; $i < 12; $i++) {
+    $times = [" 7:00", "7:50", " 8:40", " 9:50", "10:40", "11:30", "12:30", "13:20", "14:10", "15:20", "16:10"];
+
+    for ($i = 0; $i < 11; $i++) {
+        if ($i == 3) echo '<tr class="break"><td> 9:30</td><td class="empty"></td><td class="empty"></td><td class="empty"></td><td class="empty"></td><td class="empty"></td><td class="empty"></td><td class="empty"></td><td class="empty"></td><td class="empty"></td><td class="empty"></td><td class="empty"></td><td class="empty"></td></tr>';
+        if ($i == 9) echo '<tr class="break"><td>15:00</td><td class="empty"></td><td class="empty"></td><td class="empty"></td><td class="empty"></td><td class="empty"></td><td class="empty"></td><td class="empty"></td><td class="empty"></td><td class="empty"></td><td class="empty"></td><td class="empty"></td><td class="empty"></td></tr>';
+        echo "<tr><td>" . $times[$i] . "</td>";
         for ($k = 0; $k < 3; $k++) {
             for ($j = 0; $j < 4; $j++) {
                 $c = (($k + 1) * 1000) + $j + 1;
-                $c1001 = mysqli_fetch_assoc(mysqli_query($con, "select * from " . $selectid . " where Day = '" . $d . "' and Time = " . $i . " and Class = " . $c . ";"));
-                echo print_r($c1001, true);
-                echo "<br>";
+                $databaseArr = mysqli_fetch_assoc(mysqli_query($con, "select * from " . $selectid . " where Day = '" . $d . "' and Time = " . $i . " and Class = " . $c . ";"));
+                echo "<td><span class=\"subject\">";
+                echo $databaseArr["Subject"];
+                echo "</span><span class=\"teacher\">";
+                echo $databaseArr["Teacher"];
+                echo "</span></td>";
+                //echo print_r($databaseArr, true);
             }
         }
+        echo "</tr>";
+        if ($i == 10) echo '<tr class="break"><td>17:00</td><td class="empty"></td><td class="empty"></td><td class="empty"></td><td class="empty"></td><td class="empty"></td><td class="empty"></td><td class="empty"></td><td class="empty"></td><td class="empty"></td><td class="empty"></td><td class="empty"></td><td class="empty"></td></tr>';
     }
 
     // Working on it! :D
     
 ?>
-                <center>
-                    <table>
-                        <tbody>
-<tr><th>Hora</th><th>1001</th><th>1002</th><th>1003</th><th>1004</th><th>2001</th><th>2002</th><th>2003</th><th>2004</th><th>3001</th><th>3002</th><th>3003</th><th>3004</th></tr>
-<tr><td> 7:00</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
-<tr><td> 7:50</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
-<tr><td> 8:40</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
-<tr class="break"><td> 9:30</td><td class="empty"></td><td class="empty"></td><td class="empty"></td><td class="empty"></td><td class="empty"></td><td class="empty"></td><td class="empty"></td><td class="empty"></td><td class="empty"></td><td class="empty"></td><td class="empty"></td><td class="empty"></td></tr>
-<tr><td> 9:40</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
-<tr><td>10:30</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
-<tr><td>11:20</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
-<tr><td>12:30</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
-<tr><td>13:20</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
-<tr><td>14:10</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
-<tr class="break"><td>15:00</td><td class="empty"></td><td class="empty"></td><td class="empty"></td><td class="empty"></td><td class="empty"></td><td class="empty"></td><td class="empty"></td><td class="empty"></td><td class="empty"></td><td class="empty"></td><td class="empty"></td><td class="empty"></td></tr>
-<tr><td>15:20</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
-<tr><td>16:10</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
-<tr class="break"><td>17:00</td><td class="empty"></td><td class="empty"></td><td class="empty"></td><td class="empty"></td><td class="empty"></td><td class="empty"></td><td class="empty"></td><td class="empty"></td><td class="empty"></td><td class="empty"></td><td class="empty"></td><td class="empty"></td></tr>
                         </tbody>
                     </table>
                 </center>
