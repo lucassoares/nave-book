@@ -22,51 +22,63 @@
             -o-user-select: none;
             cursor: default;
         }
-        .b {
-            font-family:"Bree Serif",serif
-        }
-        .l, body{
-            font-family:"Lora",serif
-        }
-        .o {
-            font-family:"Open Sans",sans-serif
-        }
         body {
-            margin:0;
-            color:#0a0a0a;
+            margin: 0;
+            color: #0a0a0a;
+            font-family: "Lora", serif;
+            background-color: #ef3d4d;
         }
         #body {
             width: 100%;
             margin: 0;
+            background-color: #fefefe;
         }
         /*@media screen and (min-width: 1300px) and (max-width: 3032px) {*/
         header, footer {
             background-color: #ef3d4d;
-            height: 70px
+            height: 70px;
+            font-family: "Open Sans",sans-serif;
+            color: #fefefe;
         }
         header #title {
             font-size: 35px;
-            color: #fefefe;
-            position: absolute;
+            position: relative;
             left: 15px;
             top: 10px;
-            font-family: "Open Sans",sans-serif;
+            display: inline-block;
+            margin-right: 40px;
         }
         header #title:after {
             content: "book";
             color: #d0d0d0;
             font-weight: 100;
         }
-        body, body header #logo{
-            background-color:#fefefe
+        #toolbar {
+            display: inline-block;
+            transform: translateY(5px);
+        }
+        #toolbar .timetables, #toolbar .images {
+            display: inline-block;
+            padding: 0px 15px;
+            cursor: pointer;
+        }
+        #toolbar .timetables {
+            border-right: 1px solid #fefefe;
+        }
+        #toolbar .timetables:hover, #toolbar .images:hover {
+            color: #d0d0d0;
+        }
+        #logo {
+            background-color: #fefefe;
         }
         div.text {
-            padding:30px;
-            font-size:17px;
+            padding: 30px;
+            font-size: 17px;
         }
         h1 {
             color: #ef3d4d;
             font-size: 30px;
+            font-family: "Bree Serif", serif;
         }
         .display {
             max-width: 80%;
@@ -111,6 +123,7 @@
             font-size: 27px;
             font-weight: bold;
             cursor: pointer;
+            font-family: "Bree Serif", serif;
         }
         .note {
             font-size: 12px;
@@ -142,15 +155,46 @@
         }
     </style>
 </head>
-<body>
+<body onload="loaded();">
     <div id="content" class="u">
         <header>
             <div id="title" class="u">NAVE</div>
+            <div id="toolbar">
+                <div class="timetables">Horários</div>
+                <div class="images">Imagens</div>
+            </div>
         </header>
         <div id="body">
-            <div class="u text">
-                <h1 class="b">Horário de
-                    <select class="b">
+<?php
+
+    $d = "";
+    if ($_SERVER["REQUEST_METHOD"] === "GET") {
+        if ($_GET["i"]) {
+            $d = "images";
+        } else if ($_GET["d"]) {
+            $d = ($_GET["d"]+0 >= 0 && $_GET["d"]+0 <= 4) ? $_GET["d"] : 0;
+        } else {
+            $d = "0";
+        }
+    }
+
+    if ($d != "images") {
+
+        // These must be set ;)
+        $hostname = "";
+        $username = "";
+        $password = "";
+        $database = "";
+        $selectid = "timetables";
+        
+        $con = mysqli_connect($hostname, $username, $password, $database) or die("Could not connect: " . mysqli_error($con));
+
+
+        $times = [" 7:00", "7:50", " 8:40", " 9:50", "10:40", "11:30", "12:30", "13:20", "14:10", "15:20", "16:10"];
+
+        echo '<div class="u text">
+                <h1>Horário de
+                    <select>
                         <option>Segunda-feira</option>
                         <option>Terça-feira</option>
                         <option>Quarta-feira</option>
@@ -162,67 +206,56 @@
                 <center>
                     <table>
                         <tbody>
-<tr><th>Hora</th><th>1001</th><th>1002</th><th>1003</th><th>1004</th><th>2001</th><th>2002</th><th>2003</th><th>2004</th><th>3001</th><th>3002</th><th>3003</th><th>3004</th></tr>
-<?php
+<tr><th>Hora</th><th>1001</th><th>1002</th><th>1003</th><th>1004</th><th>2001</th><th>2002</th><th>2003</th><th>2004</th><th>3001</th><th>3002</th><th>3003</th><th>3004</th></tr>';
 
-    // These must be set ;)
-    $hostname = "";
-    $username = "";
-    $password = "";
-    $database = "";
-    $selectid = "timetables";
-    
-    $con = mysqli_connect($hostname, $username, $password, $database) or die("Could not connect: " . mysqli_error($con));
-
-    $d = "";
-    if ($_SERVER["REQUEST_METHOD"] === "GET" && $_GET["d"]) {
-        $d = $_GET["d"];
-    } else {
-        $d = "0";
-    }
-
-    $times = [" 7:00", "7:50", " 8:40", " 9:50", "10:40", "11:30", "12:30", "13:20", "14:10", "15:20", "16:10"];
-
-    for ($i = 0; $i < 11; $i++) {
-        if ($i == 3) echo '<tr class="break"><td> 9:30</td><td class="empty"></td><td class="empty"></td><td class="empty"></td><td class="empty"></td><td class="empty"></td><td class="empty"></td><td class="empty"></td><td class="empty"></td><td class="empty"></td><td class="empty"></td><td class="empty"></td><td class="empty"></td></tr>';
-        if ($i == 9) echo '<tr class="break"><td>15:00</td><td class="empty"></td><td class="empty"></td><td class="empty"></td><td class="empty"></td><td class="empty"></td><td class="empty"></td><td class="empty"></td><td class="empty"></td><td class="empty"></td><td class="empty"></td><td class="empty"></td><td class="empty"></td></tr>';
-        echo "<tr><td>" . $times[$i] . "</td>";
-        for ($k = 0; $k < 3; $k++) {
-            for ($j = 0; $j < 4; $j++) {
-                $c = (($k + 1) * 1000) + $j + 1;
-                $databaseArr = mysqli_fetch_assoc(mysqli_query($con, "select * from " . $selectid . " where Day = '" . $d . "' and Time = " . $i . " and Class = " . $c . ";"));
-                echo "<td><span class=\"subject\">";
-                echo $databaseArr["Subject"];
-                echo "</span><span class=\"teacher\">";
-                echo $databaseArr["Teacher"];
-                echo "</span></td>";
-                //echo print_r($databaseArr, true);
+        for ($i = 0; $i < 11; $i++) {
+            if ($i == 3) echo '<tr class="break"><td> 9:30</td><td class="empty"></td><td class="empty"></td><td class="empty"></td><td class="empty"></td><td class="empty"></td><td class="empty"></td><td class="empty"></td><td class="empty"></td><td class="empty"></td><td class="empty"></td><td class="empty"></td><td class="empty"></td></tr>';
+            if ($i == 9) echo '<tr class="break"><td>15:00</td><td class="empty"></td><td class="empty"></td><td class="empty"></td><td class="empty"></td><td class="empty"></td><td class="empty"></td><td class="empty"></td><td class="empty"></td><td class="empty"></td><td class="empty"></td><td class="empty"></td><td class="empty"></td></tr>';
+            echo "<tr><td>" . $times[$i] . "</td>";
+            for ($k = 0; $k < 3; $k++) {
+                for ($j = 0; $j < 4; $j++) {
+                    $c = (($k + 1) * 1000) + $j + 1;
+                    $databaseArr = mysqli_fetch_assoc(mysqli_query($con, "select * from " . $selectid . " where Day = '" . $d . "' and Time = " . $i . " and Class = " . $c . ";"));
+                    echo "<td><span class=\"subject\">";
+                    echo $databaseArr["Subject"];
+                    echo "</span><span class=\"teacher\">";
+                    echo $databaseArr["Teacher"];
+                    echo "</span></td>";
+                    //echo print_r($databaseArr, true);
+                }
             }
+            echo "</tr>";
+            if ($i == 10) echo '<tr class="break"><td>17:00</td><td class="empty"></td><td class="empty"></td><td class="empty"></td><td class="empty"></td><td class="empty"></td><td class="empty"></td><td class="empty"></td><td class="empty"></td><td class="empty"></td><td class="empty"></td><td class="empty"></td><td class="empty"></td></tr>';
         }
-        echo "</tr>";
-        if ($i == 10) echo '<tr class="break"><td>17:00</td><td class="empty"></td><td class="empty"></td><td class="empty"></td><td class="empty"></td><td class="empty"></td><td class="empty"></td><td class="empty"></td><td class="empty"></td><td class="empty"></td><td class="empty"></td><td class="empty"></td><td class="empty"></td></tr>';
-    }
 
-    // Working on it! :D
-    
-?>
-                        </tbody>
-                    </table>
-                </center>
-                <p>Horário escola mais atualizado possível, de todas as turmas.</p>
-            </div>
-            <div class="u text">
-                <h1 class="b">Imagens</h1>
+        echo '</tbody>
+                </table>
+            </center>
+        </div>';
+    } else {
+
+        echo '<div class="u text">
+                <h1>Imagens</h1>
                 <center>
                     <img class="display" src="http://i.imgur.com/mVHKcZz.png"/>
                     <img class="display" src="http://i.imgur.com/zaukVEO.png"/>
                 </center>
-                <p>Imagens de boa qualidade que podem ser úteis na vida de um estudante do NAVE.</p>
-            </div>
+            </div>';
+    }
+    
+?>
         </div>
     </div>
-    <footer>
-
-    </footer>
+    <footer><!-- Might add something here later? --></footer>
+    <script type="text/javascript">
+        var loaded = function() {
+            $("#toolbar .timetables").on("click", function() {
+                window.location.search = "?d=0";
+            });
+            $("#toolbar .images").on("click", function() {
+                window.location.search = "?d=images";
+            });
+        }
+    </script>
 </body>
 </html>
