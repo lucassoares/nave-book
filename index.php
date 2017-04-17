@@ -174,14 +174,14 @@
                 <td class="text-center">Professor -1 <br/> Materia - 1</td>
             </tr>
             <tr>
-                <td class="text-center">07:00</td>
+                <td class="text-center">15:20</td>
                 <td class="text-center">Professor -1 <br/> Materia - 1</td>
                 <td class="text-center">Professor -1 <br/> Materia - 1</td>
                 <td class="text-center">Professor -1 <br/> Materia - 1</td>
                 <td class="text-center">Professor -1 <br/> Materia - 1</td>
             </tr>
             <tr>
-                <td class="text-center">06:10</td>
+                <td class="text-center">16:10</td>
                 <td class="text-center">Professor -1 <br/> Materia - 1</td>
                 <td class="text-center">Professor -1 <br/> Materia - 1</td>
                 <td class="text-center">Professor -1 <br/> Materia - 1</td>
@@ -263,14 +263,14 @@
                 <td class="text-center">Professor -1 <br/> Materia - 1</td>
             </tr>
             <tr>
-                <td class="text-center">07:00</td>
+                <td class="text-center">15:20</td>
                 <td class="text-center">Professor -1 <br/> Materia - 1</td>
                 <td class="text-center">Professor -1 <br/> Materia - 1</td>
                 <td class="text-center">Professor -1 <br/> Materia - 1</td>
                 <td class="text-center">Professor -1 <br/> Materia - 1</td>
             </tr>
             <tr>
-                <td class="text-center">06:10</td>
+                <td class="text-center">16:10</td>
                 <td class="text-center">Professor -1 <br/> Materia - 1</td>
                 <td class="text-center">Professor -1 <br/> Materia - 1</td>
                 <td class="text-center">Professor -1 <br/> Materia - 1</td>

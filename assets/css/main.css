@@ -10,3 +10,9 @@ body {
 .carousel-icon {
     margin-top: 300px;
 }
+
+.carousel-control.left, .carousel-control.right {
+    background-image: -webkit-radial-gradient(circle at center, rgba(0,0,0,.00001) 0,rgba(0,0,0,.2) 100%);
+    background-image: -o-radial-gradient(circle at center, rgba(0,0,0,.00001) 0,rgba(0,0,0,.2) 100%);
+    background-image: radial-gradient(circle at center, rgba(0,0,0,.00001) 0,rgba(0,0,0,.2) 100%);
+}
