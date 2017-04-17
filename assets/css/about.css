@@ -1,0 +1,11 @@
+.main-text {
+    margin-left: 100px;
+    max-width: 950px;
+}
+
+.text-content {
+     font-size: 20pt;
+     text-align: justify;
+     text-justify: inter-word;
+     padding-bottom: 20px;
+}

@@ -8,6 +8,7 @@
     <link href="assets/css/bootstrap/bootstrap.css" rel="stylesheet" />
     <link href="assets/css/footer.css" rel="stylesheet" />
     <link href="assets/css/header.css" rel="stylesheet" />
+    <link href="assets/css/about.css" rel="stylesheet" />
     <link href="assets/css/main.css" rel="stylesheet" />
     <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
 </head>
@@ -19,9 +20,10 @@
             </div>
             <div>
                 <ul class="nav navbar-nav">
-                    <li><a href="#">Horarios</a></li>
-                    <li><a href="#">Sobre</a></li>
-                    <li><a href="#">Contato</a></li>
+                    <li><a href="/">Horarios</a></li>
+                    <li><a href="/images.php">Imagens</a></li>
+                    <li><a href="/about.php">Sobre</a></li>
+                    <li><a href="/contact.php">Contato</a></li>
                 </ul>
             </div>
         </div>

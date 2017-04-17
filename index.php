@@ -13,7 +13,7 @@
   <!-- Wrapper for slides -->
   <div class="carousel-inner" role="listbox">
     <div class="item active">
-        <table table class="table table-striped table-bordered">
+        <table table class="table table-bordered">
             <tr>
                 <td class="text-center">Horarios</td>
                 <td class="text-center">1001</td>
@@ -28,7 +28,7 @@
                 
                     $result = mysqli_query($connection, "select * from monday WHERE horario='07:00'");
 
-                    while($horary = mysqli_fetch_array($result)) { ?>
+                    while($horary = mysqli_fetch_array($result, MYSQLI_BOTH)) { ?>
                         <td class="text-center"><?=$horary['1001'];?></td>
                         <td class="text-center"><?=$horary['1002'];?></td>
                         <td class="text-center"><?=$horary['1003'];?></td>
@@ -42,7 +42,7 @@
                 
                     $result = mysqli_query($connection, "select * from monday WHERE horario='07:50'");
 
-                    while($horary = mysqli_fetch_array($result)) { ?>
+                    while($horary = mysqli_fetch_array($result, MYSQLI_BOTH)) { ?>
                         <td class="text-center"><?=$horary['1001'];?></td>
                         <td class="text-center"><?=$horary['1002'];?></td>
                         <td class="text-center"><?=$horary['1003'];?></td>
@@ -55,7 +55,7 @@
                 
                     $result = mysqli_query($connection, "select * from monday WHERE horario='08:40'");
 
-                    while($horary = mysqli_fetch_array($result)) { ?>
+                    while($horary = mysqli_fetch_array($result, MYSQLI_BOTH)) { ?>
                         <td class="text-center"><?=$horary['1001'];?></td>
                         <td class="text-center"><?=$horary['1002'];?></td>
                         <td class="text-center"><?=$horary['1003'];?></td>
@@ -68,7 +68,7 @@
                 
                     $result = mysqli_query($connection, "select * from monday WHERE horario='09:50'");
 
-                    while($horary = mysqli_fetch_array($result)) { ?>
+                    while($horary = mysqli_fetch_array($result, MYSQLI_BOTH)) { ?>
                         <td class="text-center"><?=$horary['1001'];?></td>
                         <td class="text-center"><?=$horary['1002'];?></td>
                         <td class="text-center"><?=$horary['1003'];?></td>
@@ -81,7 +81,7 @@
                 
                     $result = mysqli_query($connection, "select * from monday WHERE horario='10:40'");
 
-                    while($horary = mysqli_fetch_array($result)) { ?>
+                    while($horary = mysqli_fetch_array($result, MYSQLI_BOTH)) { ?>
                         <td class="text-center"><?=$horary['1001'];?></td>
                         <td class="text-center"><?=$horary['1002'];?></td>
                         <td class="text-center"><?=$horary['1003'];?></td>
@@ -94,7 +94,7 @@
                 
                     $result = mysqli_query($connection, "select * from monday WHERE horario='11:30'");
 
-                    while($horary = mysqli_fetch_array($result)) { ?>
+                    while($horary = mysqli_fetch_array($result, MYSQLI_BOTH)) { ?>
                         <td class="text-center"><?=$horary['1001'];?></td>
                         <td class="text-center"><?=$horary['1002'];?></td>
                         <td class="text-center"><?=$horary['1003'];?></td>
@@ -107,7 +107,7 @@
                 
                     $result = mysqli_query($connection, "select * from monday WHERE horario='12:30'");
 
-                    while($horary = mysqli_fetch_array($result)) { ?>
+                    while($horary = mysqli_fetch_array($result, MYSQLI_BOTH)) { ?>
                         <td class="text-center"><?=$horary['1001'];?></td>
                         <td class="text-center"><?=$horary['1002'];?></td>
                         <td class="text-center"><?=$horary['1003'];?></td>
@@ -120,7 +120,7 @@
                 
                     $result = mysqli_query($connection, "select * from monday WHERE horario='13:20'");
 
-                    while($horary = mysqli_fetch_array($result)) { ?>
+                    while($horary = mysqli_fetch_array($result, MYSQLI_BOTH)) { ?>
                         <td class="text-center"><?=$horary['1001'];?></td>
                         <td class="text-center"><?=$horary['1002'];?></td>
                         <td class="text-center"><?=$horary['1003'];?></td>
@@ -133,7 +133,7 @@
                 
                     $result = mysqli_query($connection, "select * from monday WHERE horario='14:30'");
 
-                    while($horary = mysqli_fetch_array($result)) { ?>
+                    while($horary = mysqli_fetch_array($result, MYSQLI_BOTH)) { ?>
                         <td class="text-center"><?=$horary['1001'];?></td>
                         <td class="text-center"><?=$horary['1002'];?></td>
                         <td class="text-center"><?=$horary['1003'];?></td>
@@ -146,7 +146,7 @@
                 
                     $result = mysqli_query($connection, "select * from monday WHERE horario='15:20'");
 
-                    while($horary = mysqli_fetch_array($result)) { ?>
+                    while($horary = mysqli_fetch_array($result, MYSQLI_BOTH)) { ?>
                         <td class="text-center"><?=$horary['1001'];?></td>
                         <td class="text-center"><?=$horary['1002'];?></td>
                         <td class="text-center"><?=$horary['1003'];?></td>
@@ -159,7 +159,7 @@
                 
                     $result = mysqli_query($connection, "select * from monday WHERE horario='16:10'");
 
-                    while($horary = mysqli_fetch_array($result)) { ?>
+                    while($horary = mysqli_fetch_array($result, MYSQLI_BOTH)) { ?>
                         <td class="text-center"><?=$horary['1001'];?></td>
                         <td class="text-center"><?=$horary['1002'];?></td>
                         <td class="text-center"><?=$horary['1003'];?></td>
@@ -184,7 +184,7 @@
                 
                     $result = mysqli_query($connection, "select * from monday WHERE horario='07:00'");
 
-                    while($horary = mysqli_fetch_array($result)) { ?>
+                    while($horary = mysqli_fetch_array($result, MYSQLI_BOTH)) { ?>
                         <td class="text-center"><?=$horary['2001'];?></td>
                         <td class="text-center"><?=$horary['2002'];?></td>
                         <td class="text-center"><?=$horary['2003'];?></td>
@@ -197,7 +197,7 @@
                 
                     $result = mysqli_query($connection, "select * from monday WHERE horario='07:50'");
 
-                    while($horary = mysqli_fetch_array($result)) { ?>
+                    while($horary = mysqli_fetch_array($result, MYSQLI_BOTH)) { ?>
                         <td class="text-center"><?=$horary['2001'];?></td>
                         <td class="text-center"><?=$horary['2002'];?></td>
                         <td class="text-center"><?=$horary['2003'];?></td>
@@ -210,7 +210,7 @@
                 
                     $result = mysqli_query($connection, "select * from monday WHERE horario='08:40'");
 
-                    while($horary = mysqli_fetch_array($result)) { ?>
+                    while($horary = mysqli_fetch_array($result, MYSQLI_BOTH)) { ?>
                         <td class="text-center"><?=$horary['2001'];?></td>
                         <td class="text-center"><?=$horary['2002'];?></td>
                         <td class="text-center"><?=$horary['2003'];?></td>
@@ -223,7 +223,7 @@
                 
                     $result = mysqli_query($connection, "select * from monday WHERE horario='09:50'");
 
-                    while($horary = mysqli_fetch_array($result)) { ?>
+                    while($horary = mysqli_fetch_array($result, MYSQLI_BOTH)) { ?>
                         <td class="text-center"><?=$horary['2001'];?></td>
                         <td class="text-center"><?=$horary['2002'];?></td>
                         <td class="text-center"><?=$horary['2003'];?></td>
@@ -236,7 +236,7 @@
                 
                     $result = mysqli_query($connection, "select * from monday WHERE horario='10:40'");
 
-                    while($horary = mysqli_fetch_array($result)) { ?>
+                    while($horary = mysqli_fetch_array($result, MYSQLI_BOTH)) { ?>
                         <td class="text-center"><?=$horary['2001'];?></td>
                         <td class="text-center"><?=$horary['2002'];?></td>
                         <td class="text-center"><?=$horary['2003'];?></td>
@@ -249,7 +249,7 @@
                 
                     $result = mysqli_query($connection, "select * from monday WHERE horario='11:30'");
 
-                    while($horary = mysqli_fetch_array($result)) { ?>
+                    while($horary = mysqli_fetch_array($result, MYSQLI_BOTH)) { ?>
                         <td class="text-center"><?=$horary['2001'];?></td>
                         <td class="text-center"><?=$horary['2002'];?></td>
                         <td class="text-center"><?=$horary['2003'];?></td>
@@ -262,7 +262,7 @@
                 
                     $result = mysqli_query($connection, "select * from monday WHERE horario='12:30'");
 
-                    while($horary = mysqli_fetch_array($result)) { ?>
+                    while($horary = mysqli_fetch_array($result, MYSQLI_BOTH)) { ?>
                         <td class="text-center"><?=$horary['2001'];?></td>
                         <td class="text-center"><?=$horary['2002'];?></td>
                         <td class="text-center"><?=$horary['2003'];?></td>
@@ -275,7 +275,7 @@
                 
                     $result = mysqli_query($connection, "select * from monday WHERE horario='13:20'");
 
-                    while($horary = mysqli_fetch_array($result)) { ?>
+                    while($horary = mysqli_fetch_array($result, MYSQLI_BOTH)) { ?>
                         <td class="text-center"><?=$horary['2001'];?></td>
                         <td class="text-center"><?=$horary['2002'];?></td>
                         <td class="text-center"><?=$horary['2003'];?></td>
@@ -288,7 +288,7 @@
                 
                     $result = mysqli_query($connection, "select * from monday WHERE horario='14:30'");
 
-                    while($horary = mysqli_fetch_array($result)) { ?>
+                    while($horary = mysqli_fetch_array($result, MYSQLI_BOTH)) { ?>
                         <td class="text-center"><?=$horary['2001'];?></td>
                         <td class="text-center"><?=$horary['2002'];?></td>
                         <td class="text-center"><?=$horary['2003'];?></td>
@@ -301,7 +301,7 @@
                 
                     $result = mysqli_query($connection, "select * from monday WHERE horario='15:20'");
 
-                    while($horary = mysqli_fetch_array($result)) { ?>
+                    while($horary = mysqli_fetch_array($result, MYSQLI_BOTH)) { ?>
                         <td class="text-center"><?=$horary['2001'];?></td>
                         <td class="text-center"><?=$horary['2002'];?></td>
                         <td class="text-center"><?=$horary['2003'];?></td>
@@ -314,7 +314,7 @@
                 
                     $result = mysqli_query($connection, "select * from monday WHERE horario='16:10'");
 
-                    while($horary = mysqli_fetch_array($result)) { ?>
+                    while($horary = mysqli_fetch_array($result, MYSQLI_BOTH)) { ?>
                         <td class="text-center"><?=$horary['2001'];?></td>
                         <td class="text-center"><?=$horary['2002'];?></td>
                         <td class="text-center"><?=$horary['2003'];?></td>
@@ -339,7 +339,7 @@
                 
                     $result = mysqli_query($connection, "select * from monday WHERE horario='07:00'");
 
-                    while($horary = mysqli_fetch_array($result)) { ?>
+                    while($horary = mysqli_fetch_array($result, MYSQLI_BOTH)) { ?>
                         <td class="text-center"><?=$horary['3001'];?></td>
                         <td class="text-center"><?=$horary['3002'];?></td>
                         <td class="text-center"><?=$horary['3003'];?></td>
@@ -352,7 +352,7 @@
                 
                     $result = mysqli_query($connection, "select * from monday WHERE horario='07:50'");
 
-                    while($horary = mysqli_fetch_array($result)) { ?>
+                    while($horary = mysqli_fetch_array($result, MYSQLI_BOTH)) { ?>
                         <td class="text-center"><?=$horary['3001'];?></td>
                         <td class="text-center"><?=$horary['3002'];?></td>
                         <td class="text-center"><?=$horary['3003'];?></td>
@@ -365,7 +365,7 @@
                 
                     $result = mysqli_query($connection, "select * from monday WHERE horario='08:40'");
 
-                    while($horary = mysqli_fetch_array($result)) { ?>
+                    while($horary = mysqli_fetch_array($result, MYSQLI_BOTH)) { ?>
                         <td class="text-center"><?=$horary['3001'];?></td>
                         <td class="text-center"><?=$horary['3002'];?></td>
                         <td class="text-center"><?=$horary['3003'];?></td>
@@ -378,7 +378,7 @@
                 
                     $result = mysqli_query($connection, "select * from monday WHERE horario='09:50'");
 
-                    while($horary = mysqli_fetch_array($result)) { ?>
+                    while($horary = mysqli_fetch_array($result, MYSQLI_BOTH)) { ?>
                         <td class="text-center"><?=$horary['3001'];?></td>
                         <td class="text-center"><?=$horary['3002'];?></td>
                         <td class="text-center"><?=$horary['3003'];?></td>
@@ -391,7 +391,7 @@
                 
                     $result = mysqli_query($connection, "select * from monday WHERE horario='10:40'");
 
-                    while($horary = mysqli_fetch_array($result)) { ?>
+                    while($horary = mysqli_fetch_array($result, MYSQLI_BOTH)) { ?>
                         <td class="text-center"><?=$horary['3001'];?></td>
                         <td class="text-center"><?=$horary['3002'];?></td>
                         <td class="text-center"><?=$horary['3003'];?></td>
@@ -404,7 +404,7 @@
                 
                     $result = mysqli_query($connection, "select * from monday WHERE horario='11:30'");
 
-                    while($horary = mysqli_fetch_array($result)) { ?>
+                    while($horary = mysqli_fetch_array($result, MYSQLI_BOTH)) { ?>
                         <td class="text-center"><?=$horary['3001'];?></td>
                         <td class="text-center"><?=$horary['3002'];?></td>
                         <td class="text-center"><?=$horary['3003'];?></td>
@@ -417,7 +417,7 @@
                 
                     $result = mysqli_query($connection, "select * from monday WHERE horario='12:30'");
 
-                    while($horary = mysqli_fetch_array($result)) { ?>
+                    while($horary = mysqli_fetch_array($result, MYSQLI_BOTH)) { ?>
                         <td class="text-center"><?=$horary['3001'];?></td>
                         <td class="text-center"><?=$horary['3002'];?></td>
                         <td class="text-center"><?=$horary['3003'];?></td>
@@ -430,7 +430,7 @@
                 
                     $result = mysqli_query($connection, "select * from monday WHERE horario='13:20'");
 
-                    while($horary = mysqli_fetch_array($result)) { ?>
+                    while($horary = mysqli_fetch_array($result, MYSQLI_BOTH)) { ?>
                         <td class="text-center"><?=$horary['3001'];?></td>
                         <td class="text-center"><?=$horary['3002'];?></td>
                         <td class="text-center"><?=$horary['3003'];?></td>
@@ -443,7 +443,7 @@
                 
                     $result = mysqli_query($connection, "select * from monday WHERE horario='14:30'");
 
-                    while($horary = mysqli_fetch_array($result)) { ?>
+                    while($horary = mysqli_fetch_array($result, MYSQLI_BOTH)) { ?>
                         <td class="text-center"><?=$horary['3001'];?></td>
                         <td class="text-center"><?=$horary['3002'];?></td>
                         <td class="text-center"><?=$horary['3003'];?></td>
@@ -456,7 +456,7 @@
                 
                     $result = mysqli_query($connection, "select * from monday WHERE horario='15:20'");
 
-                    while($horary = mysqli_fetch_array($result)) { ?>
+                    while($horary = mysqli_fetch_array($result, MYSQLI_BOTH)) { ?>
                         <td class="text-center"><?=$horary['3001'];?></td>
                         <td class="text-center"><?=$horary['3002'];?></td>
                         <td class="text-center"><?=$horary['3003'];?></td>
@@ -469,7 +469,7 @@
                 
                     $result = mysqli_query($connection, "select * from monday WHERE horario='16:10'");
 
-                    while($horary = mysqli_fetch_array($result)) { ?>
+                    while($horary = mysqli_fetch_array($result, MYSQLI_BOTH)) { ?>
                         <td class="text-center"><?=$horary['3001'];?></td>
                         <td class="text-center"><?=$horary['3002'];?></td>
                         <td class="text-center"><?=$horary['3003'];?></td>
