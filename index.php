@@ -23,80 +23,148 @@
             </tr>
             <tr>
                 <td class="text-center">07:00</td>
-                <td class="text-center">Professor -1 <br/> Materia - 1</td>
-                <td class="text-center">Professor -1 <br/> Materia - 1</td>
-                <td class="text-center">Professor -1 <br/> Materia - 1</td>
-                <td class="text-center">Professor -1 <br/> Materia - 1</td>
+
+                <?php include("models/connect.php");
+                
+                    $result = mysqli_query($connection, "select * from monday WHERE horario='07:00'");
+
+                    while($horary = mysqli_fetch_array($result)) { ?>
+                        <td class="text-center"><?=$horary['1001'];?></td>
+                        <td class="text-center"><?=$horary['1002'];?></td>
+                        <td class="text-center"><?=$horary['1003'];?></td>
+                        <td class="text-center"><?=$horary['1004'];?></td>
+                <?php } ?>
+
             </tr>
             <tr>
                 <td class="text-center">07:50</td>
-                <td class="text-center">Professor -1 <br/> Materia - 1</td>
-                <td class="text-center">Professor -1 <br/> Materia - 1</td>
-                <td class="text-center">Professor -1 <br/> Materia - 1</td>
-                <td class="text-center">Professor -1 <br/> Materia - 1</td>
+                <?php include("models/connect.php");
+                
+                    $result = mysqli_query($connection, "select * from monday WHERE horario='07:50'");
+
+                    while($horary = mysqli_fetch_array($result)) { ?>
+                        <td class="text-center"><?=$horary['1001'];?></td>
+                        <td class="text-center"><?=$horary['1002'];?></td>
+                        <td class="text-center"><?=$horary['1003'];?></td>
+                        <td class="text-center"><?=$horary['1004'];?></td>
+                <?php } ?>
             </tr>
             <tr>
                 <td class="text-center">08:40</td>
-                <td class="text-center">Professor -1 <br/> Materia - 1</td>
-                <td class="text-center">Professor -1 <br/> Materia - 1</td>
-                <td class="text-center">Professor -1 <br/> Materia - 1</td>
-                <td class="text-center">Professor -1 <br/> Materia - 1</td>
+                <?php include("models/connect.php");
+                
+                    $result = mysqli_query($connection, "select * from monday WHERE horario='08:40'");
+
+                    while($horary = mysqli_fetch_array($result)) { ?>
+                        <td class="text-center"><?=$horary['1001'];?></td>
+                        <td class="text-center"><?=$horary['1002'];?></td>
+                        <td class="text-center"><?=$horary['1003'];?></td>
+                        <td class="text-center"><?=$horary['1004'];?></td>
+                <?php } ?>
             </tr>
             <tr>
                 <td class="text-center">09:50</td>
-                <td class="text-center">Professor -1 <br/> Materia - 1</td>
-                <td class="text-center">Professor -1 <br/> Materia - 1</td>
-                <td class="text-center">Professor -1 <br/> Materia - 1</td>
-                <td class="text-center">Professor -1 <br/> Materia - 1</td>
+                <?php include("models/connect.php");
+                
+                    $result = mysqli_query($connection, "select * from monday WHERE horario='09:50'");
+
+                    while($horary = mysqli_fetch_array($result)) { ?>
+                        <td class="text-center"><?=$horary['1001'];?></td>
+                        <td class="text-center"><?=$horary['1002'];?></td>
+                        <td class="text-center"><?=$horary['1003'];?></td>
+                        <td class="text-center"><?=$horary['1004'];?></td>
+                <?php } ?>
             </tr>
             <tr>
                 <td class="text-center">10:40</td>
-                <td class="text-center">Professor -1 <br/> Materia - 1</td>
-                <td class="text-center">Professor -1 <br/> Materia - 1</td>
-                <td class="text-center">Professor -1 <br/> Materia - 1</td>
-                <td class="text-center">Professor -1 <br/> Materia - 1</td>
+                <?php include("models/connect.php");
+                
+                    $result = mysqli_query($connection, "select * from monday WHERE horario='10:40'");
+
+                    while($horary = mysqli_fetch_array($result)) { ?>
+                        <td class="text-center"><?=$horary['1001'];?></td>
+                        <td class="text-center"><?=$horary['1002'];?></td>
+                        <td class="text-center"><?=$horary['1003'];?></td>
+                        <td class="text-center"><?=$horary['1004'];?></td>
+                <?php } ?>
             </tr>
             <tr>
                 <td class="text-center">11:30</td>
-                <td class="text-center">Professor -1 <br/> Materia - 1</td>
-                <td class="text-center">Professor -1 <br/> Materia - 1</td>
-                <td class="text-center">Professor -1 <br/> Materia - 1</td>
-                <td class="text-center">Professor -1 <br/> Materia - 1</td>
+                <?php include("models/connect.php");
+                
+                    $result = mysqli_query($connection, "select * from monday WHERE horario='11:30'");
+
+                    while($horary = mysqli_fetch_array($result)) { ?>
+                        <td class="text-center"><?=$horary['1001'];?></td>
+                        <td class="text-center"><?=$horary['1002'];?></td>
+                        <td class="text-center"><?=$horary['1003'];?></td>
+                        <td class="text-center"><?=$horary['1004'];?></td>
+                <?php } ?>
             </tr>
             <tr>
                 <td class="text-center">12:30</td>
-                <td class="text-center">Professor -1 <br/> Materia - 1</td>
-                <td class="text-center">Professor -1 <br/> Materia - 1</td>
-                <td class="text-center">Professor -1 <br/> Materia - 1</td>
-                <td class="text-center">Professor -1 <br/> Materia - 1</td>
+                <?php include("models/connect.php");
+                
+                    $result = mysqli_query($connection, "select * from monday WHERE horario='12:30'");
+
+                    while($horary = mysqli_fetch_array($result)) { ?>
+                        <td class="text-center"><?=$horary['1001'];?></td>
+                        <td class="text-center"><?=$horary['1002'];?></td>
+                        <td class="text-center"><?=$horary['1003'];?></td>
+                        <td class="text-center"><?=$horary['1004'];?></td>
+                <?php } ?>
             </tr>
             <tr>
                 <td class="text-center">13:20</td>
-                <td class="text-center">Professor -1 <br/> Materia - 1</td>
-                <td class="text-center">Professor -1 <br/> Materia - 1</td>
-                <td class="text-center">Professor -1 <br/> Materia - 1</td>
-                <td class="text-center">Professor -1 <br/> Materia - 1</td>
+                <?php include("models/connect.php");
+                
+                    $result = mysqli_query($connection, "select * from monday WHERE horario='13:20'");
+
+                    while($horary = mysqli_fetch_array($result)) { ?>
+                        <td class="text-center"><?=$horary['1001'];?></td>
+                        <td class="text-center"><?=$horary['1002'];?></td>
+                        <td class="text-center"><?=$horary['1003'];?></td>
+                        <td class="text-center"><?=$horary['1004'];?></td>
+                <?php } ?>
             </tr>
             <tr>
-                <td class="text-center">14:10</td>
-                <td class="text-center">Professor -1 <br/> Materia - 1</td>
-                <td class="text-center">Professor -1 <br/> Materia - 1</td>
-                <td class="text-center">Professor -1 <br/> Materia - 1</td>
-                <td class="text-center">Professor -1 <br/> Materia - 1</td>
+                <td class="text-center">14:30</td>
+                <?php include("models/connect.php");
+                
+                    $result = mysqli_query($connection, "select * from monday WHERE horario='14:30'");
+
+                    while($horary = mysqli_fetch_array($result)) { ?>
+                        <td class="text-center"><?=$horary['1001'];?></td>
+                        <td class="text-center"><?=$horary['1002'];?></td>
+                        <td class="text-center"><?=$horary['1003'];?></td>
+                        <td class="text-center"><?=$horary['1004'];?></td>
+                <?php } ?>
             </tr>
             <tr>
-                <td class="text-center">15:00</td>
-                <td class="text-center">Professor -1 <br/> Materia - 1</td>
-                <td class="text-center">Professor -1 <br/> Materia - 1</td>
-                <td class="text-center">Professor -1 <br/> Materia - 1</td>
-                <td class="text-center">Professor -1 <br/> Materia - 1</td>
+                <td class="text-center">15:20</td>
+                <?php include("models/connect.php");
+                
+                    $result = mysqli_query($connection, "select * from monday WHERE horario='15:20'");
+
+                    while($horary = mysqli_fetch_array($result)) { ?>
+                        <td class="text-center"><?=$horary['1001'];?></td>
+                        <td class="text-center"><?=$horary['1002'];?></td>
+                        <td class="text-center"><?=$horary['1003'];?></td>
+                        <td class="text-center"><?=$horary['1004'];?></td>
+                <?php } ?>
             </tr>
             <tr>
                 <td class="text-center">16:10</td>
-                <td class="text-center">Professor -1 <br/> Materia - 1</td>
-                <td class="text-center">Professor -1 <br/> Materia - 1</td>
-                <td class="text-center">Professor -1 <br/> Materia - 1</td>
-                <td class="text-center">Professor -1 <br/> Materia - 1</td>
+                <?php include("models/connect.php");
+                
+                    $result = mysqli_query($connection, "select * from monday WHERE horario='16:10'");
+
+                    while($horary = mysqli_fetch_array($result)) { ?>
+                        <td class="text-center"><?=$horary['1001'];?></td>
+                        <td class="text-center"><?=$horary['1002'];?></td>
+                        <td class="text-center"><?=$horary['1003'];?></td>
+                        <td class="text-center"><?=$horary['1004'];?></td>
+                <?php } ?>
             </tr>
         </table>
     </div>
@@ -112,80 +180,146 @@
             </tr>
             <tr>
                 <td class="text-center">07:00</td>
-                <td class="text-center">Professor -1 <br/> Materia - 1</td>
-                <td class="text-center">Professor -1 <br/> Materia - 1</td>
-                <td class="text-center">Professor -1 <br/> Materia - 1</td>
-                <td class="text-center">Professor -1 <br/> Materia - 1</td>
+                <?php include("models/connect.php");
+                
+                    $result = mysqli_query($connection, "select * from monday WHERE horario='07:00'");
+
+                    while($horary = mysqli_fetch_array($result)) { ?>
+                        <td class="text-center"><?=$horary['2001'];?></td>
+                        <td class="text-center"><?=$horary['2002'];?></td>
+                        <td class="text-center"><?=$horary['2003'];?></td>
+                        <td class="text-center"><?=$horary['2004'];?></td>
+                <?php } ?>
             </tr>
             <tr>
                 <td class="text-center">07:50</td>
-                <td class="text-center">Professor -1 <br/> Materia - 1</td>
-                <td class="text-center">Professor -1 <br/> Materia - 1</td>
-                <td class="text-center">Professor -1 <br/> Materia - 1</td>
-                <td class="text-center">Professor -1 <br/> Materia - 1</td>
+                <?php include("models/connect.php");
+                
+                    $result = mysqli_query($connection, "select * from monday WHERE horario='07:50'");
+
+                    while($horary = mysqli_fetch_array($result)) { ?>
+                        <td class="text-center"><?=$horary['2001'];?></td>
+                        <td class="text-center"><?=$horary['2002'];?></td>
+                        <td class="text-center"><?=$horary['2003'];?></td>
+                        <td class="text-center"><?=$horary['2004'];?></td>
+                <?php } ?>
             </tr>
             <tr>
                 <td class="text-center">08:40</td>
-                <td class="text-center">Professor -1 <br/> Materia - 1</td>
-                <td class="text-center">Professor -1 <br/> Materia - 1</td>
-                <td class="text-center">Professor -1 <br/> Materia - 1</td>
-                <td class="text-center">Professor -1 <br/> Materia - 1</td>
+                <?php include("models/connect.php");
+                
+                    $result = mysqli_query($connection, "select * from monday WHERE horario='08:40'");
+
+                    while($horary = mysqli_fetch_array($result)) { ?>
+                        <td class="text-center"><?=$horary['2001'];?></td>
+                        <td class="text-center"><?=$horary['2002'];?></td>
+                        <td class="text-center"><?=$horary['2003'];?></td>
+                        <td class="text-center"><?=$horary['2004'];?></td>
+                <?php } ?>
             </tr>
             <tr>
                 <td class="text-center">09:50</td>
-                <td class="text-center">Professor -1 <br/> Materia - 1</td>
-                <td class="text-center">Professor -1 <br/> Materia - 1</td>
-                <td class="text-center">Professor -1 <br/> Materia - 1</td>
-                <td class="text-center">Professor -1 <br/> Materia - 1</td>
+                <?php include("models/connect.php");
+                
+                    $result = mysqli_query($connection, "select * from monday WHERE horario='09:50'");
+
+                    while($horary = mysqli_fetch_array($result)) { ?>
+                        <td class="text-center"><?=$horary['2001'];?></td>
+                        <td class="text-center"><?=$horary['2002'];?></td>
+                        <td class="text-center"><?=$horary['2003'];?></td>
+                        <td class="text-center"><?=$horary['2004'];?></td>
+                <?php } ?>
             </tr>
             <tr>
                 <td class="text-center">10:40</td>
-                <td class="text-center">Professor -1 <br/> Materia - 1</td>
-                <td class="text-center">Professor -1 <br/> Materia - 1</td>
-                <td class="text-center">Professor -1 <br/> Materia - 1</td>
-                <td class="text-center">Professor -1 <br/> Materia - 1</td>
+                <?php include("models/connect.php");
+                
+                    $result = mysqli_query($connection, "select * from monday WHERE horario='10:40'");
+
+                    while($horary = mysqli_fetch_array($result)) { ?>
+                        <td class="text-center"><?=$horary['2001'];?></td>
+                        <td class="text-center"><?=$horary['2002'];?></td>
+                        <td class="text-center"><?=$horary['2003'];?></td>
+                        <td class="text-center"><?=$horary['2004'];?></td>
+                <?php } ?>
             </tr>
             <tr>
                 <td class="text-center">11:30</td>
-                <td class="text-center">Professor -1 <br/> Materia - 1</td>
-                <td class="text-center">Professor -1 <br/> Materia - 1</td>
-                <td class="text-center">Professor -1 <br/> Materia - 1</td>
-                <td class="text-center">Professor -1 <br/> Materia - 1</td>
+                <?php include("models/connect.php");
+                
+                    $result = mysqli_query($connection, "select * from monday WHERE horario='11:30'");
+
+                    while($horary = mysqli_fetch_array($result)) { ?>
+                        <td class="text-center"><?=$horary['2001'];?></td>
+                        <td class="text-center"><?=$horary['2002'];?></td>
+                        <td class="text-center"><?=$horary['2003'];?></td>
+                        <td class="text-center"><?=$horary['2004'];?></td>
+                <?php } ?>
             </tr>
             <tr>
                 <td class="text-center">12:30</td>
-                <td class="text-center">Professor -1 <br/> Materia - 1</td>
-                <td class="text-center">Professor -1 <br/> Materia - 1</td>
-                <td class="text-center">Professor -1 <br/> Materia - 1</td>
-                <td class="text-center">Professor -1 <br/> Materia - 1</td>
+                <?php include("models/connect.php");
+                
+                    $result = mysqli_query($connection, "select * from monday WHERE horario='12:30'");
+
+                    while($horary = mysqli_fetch_array($result)) { ?>
+                        <td class="text-center"><?=$horary['2001'];?></td>
+                        <td class="text-center"><?=$horary['2002'];?></td>
+                        <td class="text-center"><?=$horary['2003'];?></td>
+                        <td class="text-center"><?=$horary['2004'];?></td>
+                <?php } ?>
             </tr>
             <tr>
                 <td class="text-center">13:20</td>
-                <td class="text-center">Professor -1 <br/> Materia - 1</td>
-                <td class="text-center">Professor -1 <br/> Materia - 1</td>
-                <td class="text-center">Professor -1 <br/> Materia - 1</td>
-                <td class="text-center">Professor -1 <br/> Materia - 1</td>
+                <?php include("models/connect.php");
+                
+                    $result = mysqli_query($connection, "select * from monday WHERE horario='13:20'");
+
+                    while($horary = mysqli_fetch_array($result)) { ?>
+                        <td class="text-center"><?=$horary['2001'];?></td>
+                        <td class="text-center"><?=$horary['2002'];?></td>
+                        <td class="text-center"><?=$horary['2003'];?></td>
+                        <td class="text-center"><?=$horary['2004'];?></td>
+                <?php } ?>
             </tr>
             <tr>
                 <td class="text-center">14:30</td>
-                <td class="text-center">Professor -1 <br/> Materia - 1</td>
-                <td class="text-center">Professor -1 <br/> Materia - 1</td>
-                <td class="text-center">Professor -1 <br/> Materia - 1</td>
-                <td class="text-center">Professor -1 <br/> Materia - 1</td>
+                <?php include("models/connect.php");
+                
+                    $result = mysqli_query($connection, "select * from monday WHERE horario='14:30'");
+
+                    while($horary = mysqli_fetch_array($result)) { ?>
+                        <td class="text-center"><?=$horary['2001'];?></td>
+                        <td class="text-center"><?=$horary['2002'];?></td>
+                        <td class="text-center"><?=$horary['2003'];?></td>
+                        <td class="text-center"><?=$horary['2004'];?></td>
+                <?php } ?>
             </tr>
             <tr>
                 <td class="text-center">15:20</td>
-                <td class="text-center">Professor -1 <br/> Materia - 1</td>
-                <td class="text-center">Professor -1 <br/> Materia - 1</td>
-                <td class="text-center">Professor -1 <br/> Materia - 1</td>
-                <td class="text-center">Professor -1 <br/> Materia - 1</td>
+                <?php include("models/connect.php");
+                
+                    $result = mysqli_query($connection, "select * from monday WHERE horario='15:20'");
+
+                    while($horary = mysqli_fetch_array($result)) { ?>
+                        <td class="text-center"><?=$horary['2001'];?></td>
+                        <td class="text-center"><?=$horary['2002'];?></td>
+                        <td class="text-center"><?=$horary['2003'];?></td>
+                        <td class="text-center"><?=$horary['2004'];?></td>
+                <?php } ?>
             </tr>
             <tr>
                 <td class="text-center">16:10</td>
-                <td class="text-center">Professor -1 <br/> Materia - 1</td>
-                <td class="text-center">Professor -1 <br/> Materia - 1</td>
-                <td class="text-center">Professor -1 <br/> Materia - 1</td>
-                <td class="text-center">Professor -1 <br/> Materia - 1</td>
+                <?php include("models/connect.php");
+                
+                    $result = mysqli_query($connection, "select * from monday WHERE horario='16:10'");
+
+                    while($horary = mysqli_fetch_array($result)) { ?>
+                        <td class="text-center"><?=$horary['2001'];?></td>
+                        <td class="text-center"><?=$horary['2002'];?></td>
+                        <td class="text-center"><?=$horary['2003'];?></td>
+                        <td class="text-center"><?=$horary['2004'];?></td>
+                <?php } ?>
             </tr>
         </table>
     </div>
@@ -201,80 +335,146 @@
             </tr>
             <tr>
                 <td class="text-center">07:00</td>
-                <td class="text-center">Professor -1 <br/> Materia - 1</td>
-                <td class="text-center">Professor -1 <br/> Materia - 1</td>
-                <td class="text-center">Professor -1 <br/> Materia - 1</td>
-                <td class="text-center">Professor -1 <br/> Materia - 1</td>
+                <?php include("models/connect.php");
+                
+                    $result = mysqli_query($connection, "select * from monday WHERE horario='07:00'");
+
+                    while($horary = mysqli_fetch_array($result)) { ?>
+                        <td class="text-center"><?=$horary['3001'];?></td>
+                        <td class="text-center"><?=$horary['3002'];?></td>
+                        <td class="text-center"><?=$horary['3003'];?></td>
+                        <td class="text-center"><?=$horary['3004'];?></td>
+                <?php } ?>
             </tr>
             <tr>
                 <td class="text-center">07:50</td>
-                <td class="text-center">Professor -1 <br/> Materia - 1</td>
-                <td class="text-center">Professor -1 <br/> Materia - 1</td>
-                <td class="text-center">Professor -1 <br/> Materia - 1</td>
-                <td class="text-center">Professor -1 <br/> Materia - 1</td>
+                <?php include("models/connect.php");
+                
+                    $result = mysqli_query($connection, "select * from monday WHERE horario='07:50'");
+
+                    while($horary = mysqli_fetch_array($result)) { ?>
+                        <td class="text-center"><?=$horary['3001'];?></td>
+                        <td class="text-center"><?=$horary['3002'];?></td>
+                        <td class="text-center"><?=$horary['3003'];?></td>
+                        <td class="text-center"><?=$horary['3004'];?></td>
+                <?php } ?>
             </tr>
             <tr>
                 <td class="text-center">08:40</td>
-                <td class="text-center">Professor -1 <br/> Materia - 1</td>
-                <td class="text-center">Professor -1 <br/> Materia - 1</td>
-                <td class="text-center">Professor -1 <br/> Materia - 1</td>
-                <td class="text-center">Professor -1 <br/> Materia - 1</td>
+                <?php include("models/connect.php");
+                
+                    $result = mysqli_query($connection, "select * from monday WHERE horario='08:40'");
+
+                    while($horary = mysqli_fetch_array($result)) { ?>
+                        <td class="text-center"><?=$horary['3001'];?></td>
+                        <td class="text-center"><?=$horary['3002'];?></td>
+                        <td class="text-center"><?=$horary['3003'];?></td>
+                        <td class="text-center"><?=$horary['3004'];?></td>
+                <?php } ?>
             </tr>
             <tr>
                 <td class="text-center">09:50</td>
-                <td class="text-center">Professor -1 <br/> Materia - 1</td>
-                <td class="text-center">Professor -1 <br/> Materia - 1</td>
-                <td class="text-center">Professor -1 <br/> Materia - 1</td>
-                <td class="text-center">Professor -1 <br/> Materia - 1</td>
+                <?php include("models/connect.php");
+                
+                    $result = mysqli_query($connection, "select * from monday WHERE horario='09:50'");
+
+                    while($horary = mysqli_fetch_array($result)) { ?>
+                        <td class="text-center"><?=$horary['3001'];?></td>
+                        <td class="text-center"><?=$horary['3002'];?></td>
+                        <td class="text-center"><?=$horary['3003'];?></td>
+                        <td class="text-center"><?=$horary['3004'];?></td>
+                <?php } ?>
             </tr>
             <tr>
                 <td class="text-center">10:40</td>
-                <td class="text-center">Professor -1 <br/> Materia - 1</td>
-                <td class="text-center">Professor -1 <br/> Materia - 1</td>
-                <td class="text-center">Professor -1 <br/> Materia - 1</td>
-                <td class="text-center">Professor -1 <br/> Materia - 1</td>
+                <?php include("models/connect.php");
+                
+                    $result = mysqli_query($connection, "select * from monday WHERE horario='10:40'");
+
+                    while($horary = mysqli_fetch_array($result)) { ?>
+                        <td class="text-center"><?=$horary['3001'];?></td>
+                        <td class="text-center"><?=$horary['3002'];?></td>
+                        <td class="text-center"><?=$horary['3003'];?></td>
+                        <td class="text-center"><?=$horary['3004'];?></td>
+                <?php } ?>
             </tr>
             <tr>
                 <td class="text-center">11:30</td>
-                <td class="text-center">Professor -1 <br/> Materia - 1</td>
-                <td class="text-center">Professor -1 <br/> Materia - 1</td>
-                <td class="text-center">Professor -1 <br/> Materia - 1</td>
-                <td class="text-center">Professor -1 <br/> Materia - 1</td>
+                <?php include("models/connect.php");
+                
+                    $result = mysqli_query($connection, "select * from monday WHERE horario='11:30'");
+
+                    while($horary = mysqli_fetch_array($result)) { ?>
+                        <td class="text-center"><?=$horary['3001'];?></td>
+                        <td class="text-center"><?=$horary['3002'];?></td>
+                        <td class="text-center"><?=$horary['3003'];?></td>
+                        <td class="text-center"><?=$horary['3004'];?></td>
+                <?php } ?>
             </tr>
             <tr>
                 <td class="text-center">12:30</td>
-                <td class="text-center">Professor -1 <br/> Materia - 1</td>
-                <td class="text-center">Professor -1 <br/> Materia - 1</td>
-                <td class="text-center">Professor -1 <br/> Materia - 1</td>
-                <td class="text-center">Professor -1 <br/> Materia - 1</td>
+                <?php include("models/connect.php");
+                
+                    $result = mysqli_query($connection, "select * from monday WHERE horario='12:30'");
+
+                    while($horary = mysqli_fetch_array($result)) { ?>
+                        <td class="text-center"><?=$horary['3001'];?></td>
+                        <td class="text-center"><?=$horary['3002'];?></td>
+                        <td class="text-center"><?=$horary['3003'];?></td>
+                        <td class="text-center"><?=$horary['3004'];?></td>
+                <?php } ?>
             </tr>
             <tr>
                 <td class="text-center">13:20</td>
-                <td class="text-center">Professor -1 <br/> Materia - 1</td>
-                <td class="text-center">Professor -1 <br/> Materia - 1</td>
-                <td class="text-center">Professor -1 <br/> Materia - 1</td>
-                <td class="text-center">Professor -1 <br/> Materia - 1</td>
+                <?php include("models/connect.php");
+                
+                    $result = mysqli_query($connection, "select * from monday WHERE horario='13:20'");
+
+                    while($horary = mysqli_fetch_array($result)) { ?>
+                        <td class="text-center"><?=$horary['3001'];?></td>
+                        <td class="text-center"><?=$horary['3002'];?></td>
+                        <td class="text-center"><?=$horary['3003'];?></td>
+                        <td class="text-center"><?=$horary['3004'];?></td>
+                <?php } ?>
             </tr>
             <tr>
                 <td class="text-center">14:30</td>
-                <td class="text-center">Professor -1 <br/> Materia - 1</td>
-                <td class="text-center">Professor -1 <br/> Materia - 1</td>
-                <td class="text-center">Professor -1 <br/> Materia - 1</td>
-                <td class="text-center">Professor -1 <br/> Materia - 1</td>
+                <?php include("models/connect.php");
+                
+                    $result = mysqli_query($connection, "select * from monday WHERE horario='14:30'");
+
+                    while($horary = mysqli_fetch_array($result)) { ?>
+                        <td class="text-center"><?=$horary['3001'];?></td>
+                        <td class="text-center"><?=$horary['3002'];?></td>
+                        <td class="text-center"><?=$horary['3003'];?></td>
+                        <td class="text-center"><?=$horary['3004'];?></td>
+                <?php } ?>
             </tr>
             <tr>
                 <td class="text-center">15:20</td>
-                <td class="text-center">Professor -1 <br/> Materia - 1</td>
-                <td class="text-center">Professor -1 <br/> Materia - 1</td>
-                <td class="text-center">Professor -1 <br/> Materia - 1</td>
-                <td class="text-center">Professor -1 <br/> Materia - 1</td>
+                <?php include("models/connect.php");
+                
+                    $result = mysqli_query($connection, "select * from monday WHERE horario='15:20'");
+
+                    while($horary = mysqli_fetch_array($result)) { ?>
+                        <td class="text-center"><?=$horary['3001'];?></td>
+                        <td class="text-center"><?=$horary['3002'];?></td>
+                        <td class="text-center"><?=$horary['3003'];?></td>
+                        <td class="text-center"><?=$horary['3004'];?></td>
+                <?php } ?>
             </tr>
             <tr>
                 <td class="text-center">16:10</td>
-                <td class="text-center">Professor -1 <br/> Materia - 1</td>
-                <td class="text-center">Professor -1 <br/> Materia - 1</td>
-                <td class="text-center">Professor -1 <br/> Materia - 1</td>
-                <td class="text-center">Professor -1 <br/> Materia - 1</td>
+                <?php include("models/connect.php");
+                
+                    $result = mysqli_query($connection, "select * from monday WHERE horario='16:10'");
+
+                    while($horary = mysqli_fetch_array($result)) { ?>
+                        <td class="text-center"><?=$horary['3001'];?></td>
+                        <td class="text-center"><?=$horary['3002'];?></td>
+                        <td class="text-center"><?=$horary['3003'];?></td>
+                        <td class="text-center"><?=$horary['3004'];?></td>
+                <?php } ?>
             </tr>
         </table>
     </div>
