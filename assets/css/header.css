@@ -1,0 +1,16 @@
+.my-nav {
+    background-color: #ef3d4d;
+    border: #ff4e5e
+}
+
+.my-nav a {
+    color: #ffffff !important;
+}
+
+.my-nav a:hover {
+    color: #ddd !important;
+}
+
+.main-header-text {
+    font-size: 20pt;
+}
