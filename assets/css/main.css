@@ -8,6 +8,19 @@ body {
     text-align: center;
 }
 
+.my-selection {
+    max-width: 300px;
+    margin-bottom: 50px; 
+}
+
+.my-selection-input:focus {
+    border-color: rgba(239,61,77,.8);
+    outline: 0;
+    outline: thin dotted \9;
+    -moz-box-shadow: 0 0 8px rgba(239,61,77,.2);
+    box-shadow: 0 0 8px rgba(239,61,77,.2) !important;
+}
+
 .carousel-icon {
     margin-top: 300px;
 }
@@ -24,7 +37,12 @@ body {
 }
 
 .carousel-control.left, .carousel-control.right {
-    background-image: -webkit-radial-gradient(circle at center, rgba(0,0,0,.00001) 0,rgba(0,0,0,.1) 100%);
-    background-image: -o-radial-gradient(circle at center, rgba(0,0,0,.00001) 0,rgba(0,0,0,.1) 100%);
-    background-image: radial-gradient(circle at center, rgba(0,0,0,.00001) 0,rgba(0,0,0,.1) 100%);
+    background-image: -webkit-radial-gradient(circle at center, rgba(0,0,0,.0001) 0,rgba(0,0,0,.1) 100%);
+    background-image: -o-radial-gradient(circle at center, rgba(0,0,0,.0001) 0,rgba(0,0,0,.1) 100%);
+    background-image: radial-gradient(circle at center, rgba(0,0,0,.0001) 0,rgba(0,0,0,.1) 100%);
+}
+
+.content-text {
+    max-width: 700px;
+    text-align: justify;
 }

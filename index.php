@@ -1,4 +1,18 @@
-<?php include("views/layouts/header.php") ?>
+<?php include("views/layouts/header.php"); ?>
+
+<div class="form-group center-block my-selection">
+    <form action="" method="GET">
+    <h1 id="week_day">Segunda Feira</h1>
+    <label for="sel1">Selecione o dia da semana:</label>
+        <select id="my-selection" name="day_of_the_week" onchange="this.form.submit()" class="form-control my-selection-input">
+            <option value="monday">Segunda-Feira</option>
+            <option value="tuesday">Terça-Feira</option>
+            <option value="wednesday">Quarta-Feira</option>
+            <option value="thursday">Quinta-Feira</option>
+            <option value="friday">Sexta-Feira</option>
+        </select>
+    </form>
+</div>
 
 <div class="container">
 <div id="myCarousel" class="carousel slide" data-ride="carousel">
@@ -25,8 +39,14 @@
                 <td class="text-center">07:00</td>
 
                 <?php include("models/connect.php");
-                
-                    $result = mysqli_query($connection, "select * from monday WHERE horario='07:00'");
+
+                    $day = $_GET["day_of_the_week"];
+
+                    if($day === null) {
+                        $day = "monday";
+                    }
+            
+                    $result = mysqli_query($connection, "select * from {$day} WHERE horario='07:00'");
 
                     while($horary = mysqli_fetch_array($result, MYSQLI_BOTH)) { ?>
                         <td class="text-center"><?=$horary['1001'];?></td>
@@ -39,8 +59,14 @@
             <tr>
                 <td class="text-center">07:50</td>
                 <?php include("models/connect.php");
-                
-                    $result = mysqli_query($connection, "select * from monday WHERE horario='07:50'");
+
+                    $day = $_GET["day_of_the_week"];
+
+                    if($day === null) {
+                        $day = "monday";
+                    }
+            
+                    $result = mysqli_query($connection, "select * from {$day} WHERE horario='07:50'");
 
                     while($horary = mysqli_fetch_array($result, MYSQLI_BOTH)) { ?>
                         <td class="text-center"><?=$horary['1001'];?></td>
@@ -52,8 +78,14 @@
             <tr>
                 <td class="text-center">08:40</td>
                 <?php include("models/connect.php");
-                
-                    $result = mysqli_query($connection, "select * from monday WHERE horario='08:40'");
+
+                    $day = $_GET["day_of_the_week"];
+
+                    if($day === null) {
+                        $day = "monday";
+                    }
+            
+                    $result = mysqli_query($connection, "select * from {$day} WHERE horario='08:40'");
 
                     while($horary = mysqli_fetch_array($result, MYSQLI_BOTH)) { ?>
                         <td class="text-center"><?=$horary['1001'];?></td>
@@ -65,8 +97,14 @@
             <tr>
                 <td class="text-center">09:50</td>
                 <?php include("models/connect.php");
-                
-                    $result = mysqli_query($connection, "select * from monday WHERE horario='09:50'");
+
+                    $day = $_GET["day_of_the_week"];
+
+                    if($day === null) {
+                        $day = "monday";
+                    }
+            
+                    $result = mysqli_query($connection, "select * from {$day} WHERE horario='09:50'");
 
                     while($horary = mysqli_fetch_array($result, MYSQLI_BOTH)) { ?>
                         <td class="text-center"><?=$horary['1001'];?></td>
@@ -78,8 +116,14 @@
             <tr>
                 <td class="text-center">10:40</td>
                 <?php include("models/connect.php");
-                
-                    $result = mysqli_query($connection, "select * from monday WHERE horario='10:40'");
+
+                    $day = $_GET["day_of_the_week"];
+
+                    if($day === null) {
+                        $day = "monday";
+                    }
+            
+                    $result = mysqli_query($connection, "select * from {$day} WHERE horario='10:40'");
 
                     while($horary = mysqli_fetch_array($result, MYSQLI_BOTH)) { ?>
                         <td class="text-center"><?=$horary['1001'];?></td>
@@ -91,8 +135,14 @@
             <tr>
                 <td class="text-center">11:30</td>
                 <?php include("models/connect.php");
-                
-                    $result = mysqli_query($connection, "select * from monday WHERE horario='11:30'");
+
+                    $day = $_GET["day_of_the_week"];
+
+                    if($day === null) {
+                        $day = "monday";
+                    }
+            
+                    $result = mysqli_query($connection, "select * from {$day} WHERE horario='11:30'");
 
                     while($horary = mysqli_fetch_array($result, MYSQLI_BOTH)) { ?>
                         <td class="text-center"><?=$horary['1001'];?></td>
@@ -104,8 +154,14 @@
             <tr>
                 <td class="text-center">12:30</td>
                 <?php include("models/connect.php");
-                
-                    $result = mysqli_query($connection, "select * from monday WHERE horario='12:30'");
+
+                    $day = $_GET["day_of_the_week"];
+
+                    if($day === null) {
+                        $day = "monday";
+                    }
+            
+                    $result = mysqli_query($connection, "select * from {$day} WHERE horario='12:30'");
 
                     while($horary = mysqli_fetch_array($result, MYSQLI_BOTH)) { ?>
                         <td class="text-center"><?=$horary['1001'];?></td>
@@ -117,8 +173,14 @@
             <tr>
                 <td class="text-center">13:20</td>
                 <?php include("models/connect.php");
-                
-                    $result = mysqli_query($connection, "select * from monday WHERE horario='13:20'");
+
+                    $day = $_GET["day_of_the_week"];
+
+                    if($day === null) {
+                        $day = "monday";
+                    }
+            
+                    $result = mysqli_query($connection, "select * from {$day} WHERE horario='13:20'");
 
                     while($horary = mysqli_fetch_array($result, MYSQLI_BOTH)) { ?>
                         <td class="text-center"><?=$horary['1001'];?></td>
@@ -130,8 +192,14 @@
             <tr>
                 <td class="text-center">14:30</td>
                 <?php include("models/connect.php");
-                
-                    $result = mysqli_query($connection, "select * from monday WHERE horario='14:30'");
+
+                    $day = $_GET["day_of_the_week"];
+
+                    if($day === null) {
+                        $day = "monday";
+                    }
+            
+                    $result = mysqli_query($connection, "select * from {$day} WHERE horario='14:30'");
 
                     while($horary = mysqli_fetch_array($result, MYSQLI_BOTH)) { ?>
                         <td class="text-center"><?=$horary['1001'];?></td>
@@ -143,8 +211,14 @@
             <tr>
                 <td class="text-center">15:20</td>
                 <?php include("models/connect.php");
-                
-                    $result = mysqli_query($connection, "select * from monday WHERE horario='15:20'");
+
+                    $day = $_GET["day_of_the_week"];
+
+                    if($day === null) {
+                        $day = "monday";
+                    }
+            
+                    $result = mysqli_query($connection, "select * from {$day} WHERE horario='15:20'");
 
                     while($horary = mysqli_fetch_array($result, MYSQLI_BOTH)) { ?>
                         <td class="text-center"><?=$horary['1001'];?></td>
@@ -156,8 +230,14 @@
             <tr>
                 <td class="text-center">16:10</td>
                 <?php include("models/connect.php");
-                
-                    $result = mysqli_query($connection, "select * from monday WHERE horario='16:10'");
+
+                    $day = $_GET["day_of_the_week"];
+
+                    if($day === null) {
+                        $day = "monday";
+                    }
+            
+                    $result = mysqli_query($connection, "select * from {$day} WHERE horario='16:10'");
 
                     while($horary = mysqli_fetch_array($result, MYSQLI_BOTH)) { ?>
                         <td class="text-center"><?=$horary['1001'];?></td>
@@ -181,8 +261,14 @@
             <tr>
                 <td class="text-center">07:00</td>
                 <?php include("models/connect.php");
-                
-                    $result = mysqli_query($connection, "select * from monday WHERE horario='07:00'");
+
+                    $day = $_GET["day_of_the_week"];
+
+                    if($day === null) {
+                        $day = "monday";
+                    }
+            
+                    $result = mysqli_query($connection, "select * from {$day} WHERE horario='07:00'");
 
                     while($horary = mysqli_fetch_array($result, MYSQLI_BOTH)) { ?>
                         <td class="text-center"><?=$horary['2001'];?></td>
@@ -194,8 +280,14 @@
             <tr>
                 <td class="text-center">07:50</td>
                 <?php include("models/connect.php");
-                
-                    $result = mysqli_query($connection, "select * from monday WHERE horario='07:50'");
+
+                    $day = $_GET["day_of_the_week"];
+
+                    if($day === null) {
+                        $day = "monday";
+                    }
+            
+                    $result = mysqli_query($connection, "select * from {$day} WHERE horario='07:50'");
 
                     while($horary = mysqli_fetch_array($result, MYSQLI_BOTH)) { ?>
                         <td class="text-center"><?=$horary['2001'];?></td>
@@ -207,8 +299,14 @@
             <tr>
                 <td class="text-center">08:40</td>
                 <?php include("models/connect.php");
-                
-                    $result = mysqli_query($connection, "select * from monday WHERE horario='08:40'");
+
+                    $day = $_GET["day_of_the_week"];
+
+                    if($day === null) {
+                        $day = "monday";
+                    }
+            
+                    $result = mysqli_query($connection, "select * from {$day} WHERE horario='08:40'");
 
                     while($horary = mysqli_fetch_array($result, MYSQLI_BOTH)) { ?>
                         <td class="text-center"><?=$horary['2001'];?></td>
@@ -220,8 +318,14 @@
             <tr>
                 <td class="text-center">09:50</td>
                 <?php include("models/connect.php");
-                
-                    $result = mysqli_query($connection, "select * from monday WHERE horario='09:50'");
+
+                    $day = $_GET["day_of_the_week"];
+
+                    if($day === null) {
+                        $day = "monday";
+                    }
+            
+                    $result = mysqli_query($connection, "select * from {$day} WHERE horario='09:50'");
 
                     while($horary = mysqli_fetch_array($result, MYSQLI_BOTH)) { ?>
                         <td class="text-center"><?=$horary['2001'];?></td>
@@ -233,8 +337,14 @@
             <tr>
                 <td class="text-center">10:40</td>
                 <?php include("models/connect.php");
-                
-                    $result = mysqli_query($connection, "select * from monday WHERE horario='10:40'");
+
+                    $day = $_GET["day_of_the_week"];
+
+                    if($day === null) {
+                        $day = "monday";
+                    }
+            
+                    $result = mysqli_query($connection, "select * from {$day} WHERE horario='10:40'");
 
                     while($horary = mysqli_fetch_array($result, MYSQLI_BOTH)) { ?>
                         <td class="text-center"><?=$horary['2001'];?></td>
@@ -246,8 +356,14 @@
             <tr>
                 <td class="text-center">11:30</td>
                 <?php include("models/connect.php");
-                
-                    $result = mysqli_query($connection, "select * from monday WHERE horario='11:30'");
+
+                    $day = $_GET["day_of_the_week"];
+
+                    if($day === null) {
+                        $day = "monday";
+                    }
+            
+                    $result = mysqli_query($connection, "select * from {$day} WHERE horario='11:30'");
 
                     while($horary = mysqli_fetch_array($result, MYSQLI_BOTH)) { ?>
                         <td class="text-center"><?=$horary['2001'];?></td>
@@ -259,8 +375,14 @@
             <tr>
                 <td class="text-center">12:30</td>
                 <?php include("models/connect.php");
-                
-                    $result = mysqli_query($connection, "select * from monday WHERE horario='12:30'");
+
+                    $day = $_GET["day_of_the_week"];
+
+                    if($day === null) {
+                        $day = "monday";
+                    }
+            
+                    $result = mysqli_query($connection, "select * from {$day} WHERE horario='12:30'");
 
                     while($horary = mysqli_fetch_array($result, MYSQLI_BOTH)) { ?>
                         <td class="text-center"><?=$horary['2001'];?></td>
@@ -272,8 +394,14 @@
             <tr>
                 <td class="text-center">13:20</td>
                 <?php include("models/connect.php");
-                
-                    $result = mysqli_query($connection, "select * from monday WHERE horario='13:20'");
+
+                    $day = $_GET["day_of_the_week"];
+
+                    if($day === null) {
+                        $day = "monday";
+                    }
+            
+                    $result = mysqli_query($connection, "select * from {$day} WHERE horario='13:20'");
 
                     while($horary = mysqli_fetch_array($result, MYSQLI_BOTH)) { ?>
                         <td class="text-center"><?=$horary['2001'];?></td>
@@ -285,8 +413,14 @@
             <tr>
                 <td class="text-center">14:30</td>
                 <?php include("models/connect.php");
-                
-                    $result = mysqli_query($connection, "select * from monday WHERE horario='14:30'");
+
+                    $day = $_GET["day_of_the_week"];
+
+                    if($day === null) {
+                        $day = "monday";
+                    }
+            
+                    $result = mysqli_query($connection, "select * from {$day} WHERE horario='14:30'");
 
                     while($horary = mysqli_fetch_array($result, MYSQLI_BOTH)) { ?>
                         <td class="text-center"><?=$horary['2001'];?></td>
@@ -298,8 +432,14 @@
             <tr>
                 <td class="text-center">15:20</td>
                 <?php include("models/connect.php");
-                
-                    $result = mysqli_query($connection, "select * from monday WHERE horario='15:20'");
+
+                    $day = $_GET["day_of_the_week"];
+
+                    if($day === null) {
+                        $day = "monday";
+                    }
+            
+                    $result = mysqli_query($connection, "select * from {$day} WHERE horario='15:20'");
 
                     while($horary = mysqli_fetch_array($result, MYSQLI_BOTH)) { ?>
                         <td class="text-center"><?=$horary['2001'];?></td>
@@ -311,8 +451,14 @@
             <tr>
                 <td class="text-center">16:10</td>
                 <?php include("models/connect.php");
-                
-                    $result = mysqli_query($connection, "select * from monday WHERE horario='16:10'");
+
+                    $day = $_GET["day_of_the_week"];
+
+                    if($day === null) {
+                        $day = "monday";
+                    }
+            
+                    $result = mysqli_query($connection, "select * from {$day} WHERE horario='16:10'");
 
                     while($horary = mysqli_fetch_array($result, MYSQLI_BOTH)) { ?>
                         <td class="text-center"><?=$horary['2001'];?></td>
@@ -336,8 +482,14 @@
             <tr>
                 <td class="text-center">07:00</td>
                 <?php include("models/connect.php");
-                
-                    $result = mysqli_query($connection, "select * from monday WHERE horario='07:00'");
+
+                    $day = $_GET["day_of_the_week"];
+
+                    if($day === null) {
+                        $day = "monday";
+                    }
+            
+                    $result = mysqli_query($connection, "select * from {$day} WHERE horario='07:00'");
 
                     while($horary = mysqli_fetch_array($result, MYSQLI_BOTH)) { ?>
                         <td class="text-center"><?=$horary['3001'];?></td>
@@ -349,8 +501,14 @@
             <tr>
                 <td class="text-center">07:50</td>
                 <?php include("models/connect.php");
-                
-                    $result = mysqli_query($connection, "select * from monday WHERE horario='07:50'");
+
+                    $day = $_GET["day_of_the_week"];
+
+                    if($day === null) {
+                        $day = "monday";
+                    }
+            
+                    $result = mysqli_query($connection, "select * from {$day} WHERE horario='07:50'");
 
                     while($horary = mysqli_fetch_array($result, MYSQLI_BOTH)) { ?>
                         <td class="text-center"><?=$horary['3001'];?></td>
@@ -362,8 +520,14 @@
             <tr>
                 <td class="text-center">08:40</td>
                 <?php include("models/connect.php");
-                
-                    $result = mysqli_query($connection, "select * from monday WHERE horario='08:40'");
+
+                    $day = $_GET["day_of_the_week"];
+
+                    if($day === null) {
+                        $day = "monday";
+                    }
+            
+                    $result = mysqli_query($connection, "select * from {$day} WHERE horario='08:40'");
 
                     while($horary = mysqli_fetch_array($result, MYSQLI_BOTH)) { ?>
                         <td class="text-center"><?=$horary['3001'];?></td>
@@ -375,8 +539,14 @@
             <tr>
                 <td class="text-center">09:50</td>
                 <?php include("models/connect.php");
-                
-                    $result = mysqli_query($connection, "select * from monday WHERE horario='09:50'");
+
+                    $day = $_GET["day_of_the_week"];
+
+                    if($day === null) {
+                        $day = "monday";
+                    }
+            
+                    $result = mysqli_query($connection, "select * from {$day} WHERE horario='09:50'");
 
                     while($horary = mysqli_fetch_array($result, MYSQLI_BOTH)) { ?>
                         <td class="text-center"><?=$horary['3001'];?></td>
@@ -388,8 +558,14 @@
             <tr>
                 <td class="text-center">10:40</td>
                 <?php include("models/connect.php");
-                
-                    $result = mysqli_query($connection, "select * from monday WHERE horario='10:40'");
+
+                    $day = $_GET["day_of_the_week"];
+
+                    if($day === null) {
+                        $day = "monday";
+                    }
+            
+                    $result = mysqli_query($connection, "select * from {$day} WHERE horario='10:40'");
 
                     while($horary = mysqli_fetch_array($result, MYSQLI_BOTH)) { ?>
                         <td class="text-center"><?=$horary['3001'];?></td>
@@ -401,8 +577,14 @@
             <tr>
                 <td class="text-center">11:30</td>
                 <?php include("models/connect.php");
-                
-                    $result = mysqli_query($connection, "select * from monday WHERE horario='11:30'");
+
+                    $day = $_GET["day_of_the_week"];
+
+                    if($day === null) {
+                        $day = "monday";
+                    }
+            
+                    $result = mysqli_query($connection, "select * from {$day} WHERE horario='11:30'");
 
                     while($horary = mysqli_fetch_array($result, MYSQLI_BOTH)) { ?>
                         <td class="text-center"><?=$horary['3001'];?></td>
@@ -414,8 +596,14 @@
             <tr>
                 <td class="text-center">12:30</td>
                 <?php include("models/connect.php");
-                
-                    $result = mysqli_query($connection, "select * from monday WHERE horario='12:30'");
+
+                    $day = $_GET["day_of_the_week"];
+
+                    if($day === null) {
+                        $day = "monday";
+                    }
+            
+                    $result = mysqli_query($connection, "select * from {$day} WHERE horario='12:30'");
 
                     while($horary = mysqli_fetch_array($result, MYSQLI_BOTH)) { ?>
                         <td class="text-center"><?=$horary['3001'];?></td>
@@ -427,8 +615,14 @@
             <tr>
                 <td class="text-center">13:20</td>
                 <?php include("models/connect.php");
-                
-                    $result = mysqli_query($connection, "select * from monday WHERE horario='13:20'");
+
+                    $day = $_GET["day_of_the_week"];
+
+                    if($day === null) {
+                        $day = "monday";
+                    }
+            
+                    $result = mysqli_query($connection, "select * from {$day} WHERE horario='13:20'");
 
                     while($horary = mysqli_fetch_array($result, MYSQLI_BOTH)) { ?>
                         <td class="text-center"><?=$horary['3001'];?></td>
@@ -440,8 +634,14 @@
             <tr>
                 <td class="text-center">14:30</td>
                 <?php include("models/connect.php");
-                
-                    $result = mysqli_query($connection, "select * from monday WHERE horario='14:30'");
+
+                    $day = $_GET["day_of_the_week"];
+
+                    if($day === null) {
+                        $day = "monday";
+                    }
+            
+                    $result = mysqli_query($connection, "select * from {$day} WHERE horario='14:30'");
 
                     while($horary = mysqli_fetch_array($result, MYSQLI_BOTH)) { ?>
                         <td class="text-center"><?=$horary['3001'];?></td>
@@ -453,8 +653,14 @@
             <tr>
                 <td class="text-center">15:20</td>
                 <?php include("models/connect.php");
-                
-                    $result = mysqli_query($connection, "select * from monday WHERE horario='15:20'");
+
+                    $day = $_GET["day_of_the_week"];
+
+                    if($day === null) {
+                        $day = "monday";
+                    }
+            
+                    $result = mysqli_query($connection, "select * from {$day} WHERE horario='15:20'");
 
                     while($horary = mysqli_fetch_array($result, MYSQLI_BOTH)) { ?>
                         <td class="text-center"><?=$horary['3001'];?></td>
@@ -466,8 +672,14 @@
             <tr>
                 <td class="text-center">16:10</td>
                 <?php include("models/connect.php");
-                
-                    $result = mysqli_query($connection, "select * from monday WHERE horario='16:10'");
+
+                    $day = $_GET["day_of_the_week"];
+
+                    if($day === null) {
+                        $day = "monday";
+                    }
+            
+                    $result = mysqli_query($connection, "select * from {$day} WHERE horario='16:10'");
 
                     while($horary = mysqli_fetch_array($result, MYSQLI_BOTH)) { ?>
                         <td class="text-center"><?=$horary['3001'];?></td>

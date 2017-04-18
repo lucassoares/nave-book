@@ -1,10 +1,13 @@
 <?php
-    header('Content-Type: text/html; charset=utf-8');
+    ini_set('mbstring.internal_encoding','UTF-8');
+    ini_set('mbstring.func_overload',7);
+    header('Content-type: text/html; charset=utf-8');
+    setlocale( LC_ALL, 'pt_BR.utf-8', 'pt_BR', 'Portuguese_Brazil');
 ?>
 <html>
 <head>
     <title>NAVE - BOOK</title>
-    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
     <link href="assets/css/bootstrap/bootstrap.css" rel="stylesheet" />
     <link href="assets/css/footer.css" rel="stylesheet" />
     <link href="assets/css/header.css" rel="stylesheet" />
@@ -20,13 +23,11 @@
             </div>
             <div>
                 <ul class="nav navbar-nav">
-                    <li><a href="/">Horarios</a></li>
-                    <li><a href="/images.php">Imagens</a></li>
-                    <li><a href="/about.php">Sobre</a></li>
-                    <li><a href="/contact.php">Contato</a></li>
+                    <li><a target="_blank" href="/">Horarios</a></li>
+                    <li><a target="_blank" href="/images.php">Imagens</a></li>
+                    <li><a target="_blank" href="/about.php">Sobre</a></li>
                 </ul>
             </div>
         </div>
     </div>
     <div class="principal">
-
