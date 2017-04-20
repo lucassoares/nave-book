@@ -21,7 +21,12 @@
 /*
     Multicoloured Hover Variations
 */
- 
+
+.umbler-logo {
+    max-width: 250px;
+    padding: 30px;
+}
+
 .my-social-icon {
     color: #ff4e5e;
 }

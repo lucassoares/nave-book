@@ -27,7 +27,7 @@
   <!-- Wrapper for slides -->
   <div class="carousel-inner" role="listbox">
     <div class="item active">
-        <table table class="table table-bordered">
+        <table accept-charset="UTF-8" table class="table table-bordered">
             <tr>
                 <td class="text-center">Horarios</td>
                 <td class="text-center">1001</td>
@@ -250,7 +250,7 @@
     </div>
 
     <div class="item">
-        <table table class="table table-striped table-bordered">
+        <table accept-charset="UTF-8" table class="table table-striped table-bordered">
             <tr>
                 <td class="text-center">Horarios</td>
                 <td class="text-center">2001</td>
@@ -471,7 +471,7 @@
     </div>
 
     <div class="item">
-        <table table class="table table-striped table-bordered">
+        <table accept-charset="UTF-8" table class="table table-striped table-bordered">
             <tr>
                 <td class="text-center">Horarios</td>
                 <td class="text-center">3001</td>

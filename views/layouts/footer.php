@@ -1,4 +1,10 @@
+                
                 <div class="container footer">
+                    <div class="center-block umbler-logo">
+                        <a href='https://app.umbler.com/u/mzkqd8j2'>
+                        <img src='https://static.umbler.com/brand/umbler-badges/umbler-badge-hostedby-light-bg.png' width='100%' alt='Hosted by Umbler'>
+                        </a>
+                    </div>
                     <div class="text-center center-block">
                         <a target="_blank" href="https://www.facebook.com/profile.php?id=100010532560000"><i class="fa fa-facebook-square fa-3x social my-social-icon"></i></a>
                         <a target="_blank" href="https://twitter.com/yagoazedias"><i class="fa fa-twitter-square fa-3x social my-social-icon"></i></a>
